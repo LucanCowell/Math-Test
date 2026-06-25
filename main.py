@@ -32,7 +32,6 @@ while True:
         print("10 questions will be asked.")
         score = 0
         for _ in range(10):
-            generate_question()
             correct = generate_question()
             if correct:
                 score += 1
