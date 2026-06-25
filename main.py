@@ -12,10 +12,22 @@ def generate_question():
         result = question_number1 * question_number2
 
     print(question_number1, question_symbol, question_number2)
-    user_answer = int(input("What is your answer? "))
+    user_answer = input("What is your answer? (or type 'x' to exit): ")
+    
+    if user_answer == "x":
+        print("Exiting the game...")
+        return "x"
+    
+    user_answer = int(user_answer)
+    
     if user_answer == result:
         print("Correct!")
         return True
+    
+    elif user_answer == ("x"):
+        print("Exiting the game...")
+        return quit
+    
     else:
         print("Incorrect. The correct answer is:", result)
         return False
@@ -28,13 +40,16 @@ while True:
     
     #New Game
     if choice == "A":
-        name = input("Enter your name: ")
+        name = input("Enter your name: ").title()
         print("Starting a new game...")
         print("10 questions will be asked.")
         score = 0
         for _ in range(10):
             correct = generate_question()
-            if correct:
+            
+            if correct == "x":
+                break
+            elif correct:
                 score += 1
             
         print("Game over!", name + "'s", "score is:", score)
