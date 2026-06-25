@@ -28,6 +28,7 @@ while True:
     
     #New Game
     if choice == "A":
+        name = input("Enter your name: ")
         print("Starting a new game...")
         print("10 questions will be asked.")
         score = 0
@@ -36,7 +37,7 @@ while True:
             if correct:
                 score += 1
             
-        print("Game over! Your score is:", score)
+        print("Game over!", name + "'s", "score is:", score)
         
     #Today's Highscores
     elif choice == "B":
