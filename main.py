@@ -1,4 +1,7 @@
+import os
 import random
+
+todays_scores = []
 
 def generate_question():
     question_number1 = random.randint(0, 10)
@@ -23,10 +26,6 @@ def generate_question():
     if user_answer == result:
         print("Correct!")
         return True
-    
-    elif user_answer == ("x"):
-        print("Exiting the game...")
-        return quit
     
     else:
         print("Incorrect. The correct answer is:", result)
@@ -53,14 +52,26 @@ while True:
                 score += 1
             
         print("Game over!", name + "'s", "score is:", score)
+        with open("highscores.txt", "a") as file:
+            file.write(f"{name}: {score}\n")
+            todays_scores.append((name, score))
         
     #Today's Highscores
     elif choice == "B":
         print("Displaying today's highscores...")
+        for name, score in todays_scores:
+            print(f"{name}: {score}")
         
     #View Past Highscores
     elif choice == "C":
         print("Displaying past highscores...")
+        if os.path.exists("highscores.txt"):
+            with open("highscores.txt", "r") as file:
+                past_scores = file.readlines()
+                for line in past_scores:
+                    print(line.strip())
+        else:
+            print("No past highscores found.")
         
     #Exit
     elif choice == "D":
