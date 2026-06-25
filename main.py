@@ -6,11 +6,20 @@ todays_scores = []
 def generate_question():
     question_number1 = random.randint(0, 10)
     question_number2 = random.randint(0, 10)
-    question_symbol = random.choice(["+", "-", "*"])
+    answer = random.randint(0, 10)
+    divisor = random.randint(1, 10)
+    
+    question_symbol = random.choice(["+", "-", "*", "/"])
+    
     if question_symbol == "+":
         result = question_number1 + question_number2
     elif question_symbol == "-":
         result = question_number1 - question_number2
+    elif question_symbol == "/":
+        question_number1 = answer * divisor
+        question_number2 = divisor
+        result = answer
+        
     else:
         result = question_number1 * question_number2
 
