@@ -6,3 +6,5 @@ There is currently 4 main functions
 (B) Todays Scores
 (C) View Past Scores
 (D) Quit
+
+These questions are randomly generated through the random module, which allows for a near infinite amount of questions to be asked.
