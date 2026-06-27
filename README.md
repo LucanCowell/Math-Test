@@ -15,3 +15,5 @@ There is now a difficulty function that allows for 3 modes of random question ge
 (A) Easy
 (B) Medium
 (C) Hard
+
+The users chosen difficulty is also stored on the same text file, meaning that when past scores are reviewed, it will show the users name, the users score, and the users chosen difficuly
