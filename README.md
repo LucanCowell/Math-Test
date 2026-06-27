@@ -10,3 +10,8 @@ There is currently 4 main functions
 These questions are randomly generated through the random module, which allows for a near infinite amount of questions to be asked.
 
 These scores will be stored on a seperate text file, which allows for the memory of the revious user inputs to be accessed upon the base menu.
+
+There is now a difficulty function that allows for 3 modes of random question generation:
+(A) Easy
+(B) Medium
+(C) Hard
