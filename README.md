@@ -9,7 +9,7 @@ There is currently 4 main functions
 
 The users name is also collected when starting a new game, allowing for the users score to be recorded with their matching name.
 
-These questions will be either addition, subtraction, multiplication, or division.
+These questions will be either addition, subtraction, multiplication, or division. When the questions are divison based, it is ensured that the result will not be a decimal to avoid unnessary complication.
 
 These questions are randomly generated through the random module, which allows for a near infinite amount of questions to be asked.
 
