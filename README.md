@@ -20,4 +20,6 @@ There is now a difficulty function that allows for 3 modes of random question ge
 (B) Medium
 (C) Hard
 
-The users chosen difficulty is also stored on the same text file, meaning that when past scores are reviewed, it will show the users name, the users score, and the users chosen difficuly
+The users chosen difficulty is also stored on the same text file, meaning that when past scores are reviewed, it will show the users name, the users score, and the users chosen difficuly.
+
+The greatest challenge in developing this math quiz was ensuring that the division could never result in a decimal as that would create problems when users calculate and input their answer due to the difference in rounding.
